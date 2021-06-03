@@ -22,11 +22,11 @@ body {
 }
 
 .header{
-    width: 1200px;
-    max-width: 1200px;
+    width: 1100px;
+    max-width: 1100px;
     display: flex;
-  align-items: center ;
-  justify-content: end;
+    align-items: center ;
+    justify-content: end;
 }
 
 
@@ -44,7 +44,6 @@ body {
 
 .logomedium{
     width: 150px;
-    margin-right: 30px;
     margin-top: 10px;
     margin-bottom: 10px;
 }
