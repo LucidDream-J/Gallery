@@ -11,8 +11,22 @@
     box-sizing: border-box;
 }
 
+.hero {
+    background-image: url(../images/ArtGallery.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+}
+
 body {
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+   
     font-family: 'Muli', sans-serif;
     display: flex;
     flex-direction: column;
@@ -22,8 +36,8 @@ body {
 }
 
 .header{
-    width: 90%;
-    max-width: 1200px;
+    width: 100%;
+    /* max-width: 1200px; */
     display: flex;
     align-items: center ;
     justify-content: flex-end;
@@ -36,6 +50,7 @@ body {
     font-size: 2rem;
     font-weight:lighter;
     margin-right: 30px;
+    color: red;
 }
 
 .logo {
@@ -46,6 +61,7 @@ body {
     width: 150px;
     margin-top: 10px;
     margin-bottom: 10px;
+
 }
 
 .logolarge{
