@@ -6,6 +6,7 @@
     --light: #ffffff; 
     --gray : #757575;
     --white: #ffffff;
+   
 }
 * {
     box-sizing: border-box;
@@ -19,13 +20,14 @@
     width: 100vw;
     background-attachment: fixed;
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
+    color: var(--light);
+    font-size: 3rem;
 }
 
 body {
-    /* background-color: rgb(255, 255, 255); */
+    background-color: rgb(255, 255, 255);
    
     font-family: 'Muli', sans-serif;
     display: flex;
@@ -54,14 +56,19 @@ body {
 }
 
 .logo {
-    width: 100px;
+    width: 90px;
 }
 
 .logomedium{
-    width: 150px;
+    width: 65px;
     margin-top: 10px;
     margin-bottom: 10px;
     margin-right: 10px;
+    
+}
+.logomedium:hover{
+    cursor: pointer;
+
     
 }
 
@@ -140,6 +147,8 @@ body {
 
 .close-btn {
     opacity: 0.6;
+    font-size: .9rem;
+    color: var(--gray);
     position: absolute;
     top: 40px;
     right: 30px;
@@ -174,6 +183,11 @@ color:lightslategray;
 }
 .list li a:hover {
 color: lightcoral;
+}
+
+.active{
+    color: black;
+    font-weight: bolder;
 }
 
 .footerBtn {
@@ -267,7 +281,7 @@ color: lightcoral;
     margin: 1rem auto 4rem auto;
     max-width: 1200px;
     padding: 2rem;
-    background-color: var(--white);
+    background-color: var(--transparent);
     -webkit-box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.45);
     -moz-box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.45);
     box-shadow: 0px 4px 12px -1px rgba(0,0,0,0.45);
@@ -429,3 +443,4 @@ form {
     cursor: pointer;
 }
 
+/* artists_2  */
