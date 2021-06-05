@@ -25,7 +25,7 @@
     justify-content: center;
     align-items: center;
     color: var(--light);
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 body {
@@ -39,6 +39,9 @@ body {
     min-height: 100vh;
 }
 
+.subHead{
+    font-size: 2.5rem;
+}
 .header {
     width: 95%;
     /* max-width: 1200px; */
@@ -226,7 +229,7 @@ body {
 }
 
 .footer.active {
-    bottom: 0;
+    bottom: -40px;
 }
 
 .footer .container {
@@ -451,6 +454,7 @@ form {
     /* max-width: 1000px; */
     margin: 20px 20px;
     height: 750px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22), 0 10px 10px rgba(0, 0, 0, 0.22);
 
 }
 
@@ -554,6 +558,122 @@ h3 {
     backdrop-filter: blur(2rem);
 }
 
+
+/* OPENING PAGE GE CONTENT */
+
+.container-Ge{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-bottom: 60px;
+    margin-top: 20px;
+  }
+  
+  .destination {
+  
+    box-sizing: border-box;
+    min-width: 275px;
+    max-width: 320px;
+    height: 420px;
+    margin: 20px;
+    border: 1px solid #aaa;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 400ms ease-out;
+  }
+  
+  .destination:hover,
+  .destination:active {
+    background-color: #fa923f;
+    color: white;
+  }
+  
+  .thumbnail {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+  }
+  
+
+  
+.property img {
+    object-fit: cover;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+}
+  .thumbnail img {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+    width: 100%;
+  }
+  
+  .content-Ge {
+    text-align: center;
+  }
+  
+  .container-Ge p{
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .content-Ge h1 {
+    margin: 10px 0;
+  }
+  
+
+/* hearts  */
+
+/* .hearts h3{
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.hearts small{
+    display: block;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.hearts small span{
+    
+    margin-right:5px;
+    text-align: center;
+}
+
+.fa-heart{
+    color: crimson;
+    margin-right: 5px;
+}
+
+.loveMe{
+    height: 440px;
+    width: 300px;
+    background: url('../images/portrait.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #fff; 
+    margin: auto;
+    cursor: pointer;
+    max-width: 100%;
+    position: relative;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.loveMe .fa-heart{
+    position: absolute;
+    animation: grow 0.6s linear;
+    transform: translate(-50%, -50%) scale(0);
+}
+
+@keyframes grow {
+    to {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0;
+    }
+}  */
 
 
 /* artists_2  */
