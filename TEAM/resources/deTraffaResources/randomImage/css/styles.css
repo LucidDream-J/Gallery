@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: rgb(93, 134, 121);
+    font-family: "Roboto",sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+ 
+    margin: 0;
+}
+h1{
+    color: #dba43e;
+    margin: 20px 0;
+}
+
+.outer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1000px;
+}
+
+.title{
+    margin: 10px 0 0;
+    text-align: center;
+}
+
+.container img {
+    object-fit: cover;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    max-width: 100%;
+}
+
+button{
+    width: 94%;
+    padding: 15px 15px;
+    background-color: #dba43e;
+    color: floralwhite;
+    border: none;
+    cursor: pointer;
+    margin: 10px auto;
+    font-size: 1.25rem;
+    transition: transform .3s ease-in-out, opacity .3s ease-in;
+    -webkit-transition: transform .3s ease-in-out, opacity .3s ease-in;
+    -moz-transition: transform .3s ease-in-out, opacity .3s ease-in;
+    -ms-transition: transform .3s ease-in-out, opacity .3s ease-in;
+    -o-transition: transform .3s ease-in-out, opacity .3s ease-in;
+}
+button:active{
+    font-weight: bolder;
+    transform: translateY(-3px);
+    -webkit-transform: translateY(-3px);
+    -moz-transform: translateY(-3px);
+    -ms-transform: translateY(-3px);
+    -o-transform: translateY(-3px);
+}
+button:hover{
+    opacity: .9;
+}
