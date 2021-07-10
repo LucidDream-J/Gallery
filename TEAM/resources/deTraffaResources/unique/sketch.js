@@ -1,3 +1,5 @@
+const container = document.querySelector(".container");
+
 var angle = 0;
 var locX = 250;
 var locY = 0;
@@ -20,6 +22,7 @@ function preload() {
 
 function setup() {
   cvn = createCanvas(1280, 720, WEBGL);
+  cvn.parent(container);
 
   cam = createCapture(VIDEO);
   cam.hide();
