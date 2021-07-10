@@ -73,6 +73,10 @@ h2.burns{
   background-color: rgba(255, 250, 240, 0.5);
   margin-bottom: none;
 }
+h2.awesome{
+  background-color: rgba(255, 250, 240, 0.5);
+  margin-bottom: none;
+}
 
 h3 {
   font-size: 100%;
@@ -113,6 +117,19 @@ h2::after {
 
 .hero-2 {
   background-image: url(../images/burns/tim51.jpg);
+}
+.hero-3{
+  background-image: url(../images/blockchainImages/confrontations.jpg);
+}
+.hero-4{
+  background-image: url(../images/blockchainImages/unleashYouAwesome.jpg);
+}
+.hero-5{
+  background-image: url(../images/blockchainImages/city-downtownB.jpg);
+}
+
+.divider{
+  height: 80px;
 }
 
 /* ---------------------------------------------- */
@@ -494,13 +511,13 @@ header.traffa{
       from(rgba(42, 39, 39, 0.6)),
       to(rgba(42, 39, 39, 0.6))
     ),
-    url(../images/roitsProtestsConfrontations/rPC10bgc3.jpg);
+    url(../images/blockchainImages/confrontations.jpg);
   background-image: linear-gradient(
       rgba(42, 39, 39, 0.6),
       rgba(42, 39, 39, 0.6)
     ),
-    url(../images/roitsProtestsConfrontations/rPC3.jpg);
-  background-size: cover;
+    url(../images/blockchainImages/confrontations.jpg);
+  background-size: contain;
   color: floralwhite;
   background-attachment: fixed;
 }
@@ -518,7 +535,7 @@ header.traffa{
       rgba(42, 39, 39, 0.1)
     ),
     url(../images/burns/tim45.jpg);
-  background-size: cover;
+  background-size:cover;
   color: floralwhite;
   background-attachment: fixed;
 }
