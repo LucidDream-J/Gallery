@@ -112,11 +112,11 @@ h2::after {
 }
 
 .hero-1 {
-  background-image: url(../images/burns/tim36.jpg);
+  background-image: url(../images/burns/timBurns.jpg);
 }
 
 .hero-2 {
-  background-image: url(../images/burns/tim51.jpg);
+  background-image: url(../images/burns/tim36.jpg);
 }
 .hero-3{
   background-image: url(../images/blockchainImages/confrontations.jpg);
@@ -126,6 +126,12 @@ h2::after {
 }
 .hero-5{
   background-image: url(../images/blockchainImages/city-downtownB.jpg);
+}
+.hero-6{
+  background-image: url(../images/detraffaPortraits/Xibidenharris.jpg);
+}
+.hero-7{
+  background-image: url(../images/burns/tim51.jpg);
 }
 
 .divider{
