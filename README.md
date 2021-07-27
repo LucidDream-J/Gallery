@@ -1,1 +1,1 @@
-# Gallery -GW mockup/dryDock
+# GalleryWest-WA mockup/dryDock
