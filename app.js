@@ -47,6 +47,15 @@ function removeActiveClasses() {
   });
 }
 
+///////////////////////////// Not Available message///////////////////////////
+
+document.querySelectorAll(".message").forEach((msg) => {
+  msg.addEventListener("mouseover", () => {
+    msg.classList.toggle("change");
+    // msg.nextElementSibling.classList.toggle("change");
+  });
+});
+
 // Hearts//////////////////////////////////////////////////
 
 // const loveMe = document.querySelector(".loveMe");
