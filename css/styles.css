@@ -87,9 +87,20 @@
     color: var(--light);
     font-size: 1.2rem;
 }
-.clue{
+.hero-6 {
     background-image: url(../images/clue4.jpg);
+    background-position: center center;
+    background-size: cover;
+    min-height: 100vh;
+    width: 100vw;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: var(--light);
+    font-size: 1.2rem;
 }
+
 
 .hero h1 {
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
