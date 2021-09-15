@@ -136,16 +136,6 @@
                         Currently this category is unavailable
                     </p>
                 </div>
-                <div class="message">
-                    <h3>Under Construction</h3>
-                    <div class="icons">
-                        <i class="fas fa-pencil-ruler"></i>
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <p class="message-paragraph">
-                        Currently this category is unavailable
-                    </p>
-                </div>
             </div>
         </a>
 
@@ -233,31 +223,34 @@
     </div>
     <div class="container">
         <section id="contact" class="contact">
-            <h2>Contact Us</h2>
-            <form action="#">
+            <h2>Contact Us:</h2>
+            <form action="https://formspree.io/f/mwkaarnk" method="POST" id="my-form">
                 <div class="form-container">
+                    <input type="hidden" name="_next" value="https://luciddream-j.github.io/galleryGE/thankYou.html" />
+                    <input type="hidden" name="_subject" value="new email" />
                     <div class="field">
                         <label>Name:</label>
-                        <input type="text" placeholder="Name">
+                        <input type="text" name="name" placeholder="Name" required />
                     </div>
                     <div class="field">
                         <label>Phone Number:</label>
-                        <input type="tel" placeholder="Phone Number">
+                        <input type="tel" name="number" placeholder="Phone Number" />
                     </div>
                     <div class="field w-100">
                         <label>Email:</label>
-                        <input type="mail" placeholder="Email">
+                        <input type="email" name="email" placeholder="Email" required />
                     </div>
                     <div class="field w-100">
                         <label>Message:</label>
-                        <textarea cols="30" rows="3"></textarea>
+                        <textarea cols="30" rows="3" name="message" placeholder="Your Message"></textarea>
                     </div>
                 </div>
                 <!--.form-container-->
                 <div class="submit-form">
-                    <input type="submit" class="button" value="Send">
+                    <input type="submit" class="button" value="Send" />
                 </div>
             </form>
+            <div id="status"></div>
         </section>
     </div>
     <div class="hero-2">
