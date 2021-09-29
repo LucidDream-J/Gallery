@@ -56,10 +56,6 @@ document.querySelectorAll(".message").forEach((msg) => {
   });
 });
 
-
-
-
-
 ///////////////////Form Send/////////////////////////////////////////////
 window.addEventListener("DOMContentLoaded", function () {
   // get the form elements defined in your form HTML above
@@ -109,7 +105,265 @@ function ajax(method, url, data, success, error) {
 
 ///////////////////Form Send End/////////////////////////////////////////////
 
-// Hearts//////////////////////////////////////////////////
+//////////////////////////////////////slide show/////////////////////////////////////////
+
+const container = document.getElementById("slider");
+
+const data = [
+  {
+    image: "./disobey/Vic-13A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-1A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-2A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-3A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-4A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-5A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-6A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-7A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-8A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-9A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-52A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-11A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-12A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-34A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-14A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-15A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-16A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-17A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-34A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-19A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-20A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-21A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-22A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-24A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-25A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-26A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-27B.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-28A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-29A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-30A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-31A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-32A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-32BA.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-35A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-36A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-37A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-3A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-38A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-39A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-40A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-41A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-56A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-59A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-64A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-60A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-61A.jpg",
+    text: "Obey - dis-Obey",
+  },
+
+  {
+    image: "./disobey/Vic-100A.jpg",
+    text: "Obey - dis-Obey",
+  },
+];
+
+data.forEach((item) => createSlide(item));
+
+// Create speech boxes
+function createSlide(item) {
+  const slide = document.createElement("div");
+
+  const { image, text } = item;
+
+  slide.classList.add("slide");
+
+  slide.innerHTML = `
+    <img src="${image}" alt="${text}" />
+    <h3>${text}</h3>
+  `;
+
+  // box.addEventListener('click', () => {
+  //   setTextMessage(text);
+  //   speakText();
+
+  //   // Add active effect
+  //   box.classList.add('active');
+  //   setTimeout(() => box.classList.remove('active'), 800);
+  // });
+  container.appendChild(slide);
+}
+
+function slider() {
+  let slides = document.querySelectorAll(".slide"),
+    slider = document.querySelector(".slider"),
+    last = slider.lastElementChild,
+    first = slider.firstElementChild,
+    btn = document.querySelectorAll(".btn");
+
+  slider.insertBefore(last, first);
+
+  btn.forEach((btn) => {
+    btn.addEventListener("click", movement);
+  });
+  setInterval(function () {
+    movement({ target: { id: "next" } });
+  }, 3000);
+  function movement(e) {
+    slider = document.querySelector(".slider");
+    last = slider.lastElementChild;
+    first = slider.firstElementChild;
+
+    const activeSlide = document.querySelector(".active");
+
+    if (e.target.id === "next") {
+      slider.insertBefore(first, last.nextSibling);
+
+      activeSlide.classList.remove("active");
+      activeSlide.nextElementSibling.classList.add("active");
+    } else {
+      slider.insertBefore(last, first);
+      activeSlide.classList.remove("active");
+      activeSlide.previousElementSibling.classList.add("active");
+    }
+  }
+}
+slider();
+
+//////////////////////////////////////slide show end/////////////////////////////////////
 
 // const loveMe = document.querySelector(".loveMe");
 // const times = document.querySelector("#times");
