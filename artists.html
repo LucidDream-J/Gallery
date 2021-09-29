@@ -36,11 +36,16 @@
             text-align: center;
         }
 
+        .slider__wrapper {
+            height: 75vh;
+            overflow-y: hidden;
+        }
+
         .slider {
             position: relative;
             width: 100%;
             max-width: 1500px;
-            height: 100vh;
+            height: 95vh;
             margin: auto;
             overflow: hidden;
         }
@@ -85,8 +90,11 @@
 
         .slide img {
             width: 100%;
-            object-fit: fit;
             margin: auto;
+        }
+
+        #popup {
+            overflow-y: hidden;
         }
     </style>
     <title>Gallery West - WA</title>
@@ -137,10 +145,10 @@
                         <img src="./disobey/Vic-59A.jpg" alt="">
                     </div>
                 </div>
-                <button id="prev" class="btn">Prev</button>
-                <button id="next" class="btn">Next</button>
-            </div>
 
+            </div>
+            <!-- <button id="prev" class="btn">Prev</button>
+            <button id="next" class="btn">Next</button> -->
             <div class="popup__left">
                 <!-- <img src="../images/Symbol.gif" alt="art photo" class="popup__img" /> -->
                 <!-- <div class="space"></div> -->
@@ -149,7 +157,7 @@
                 <a href="#returnTop" class="popup__close">&times;</a>
             </div>
         </div>
-        <img src="./images/foxes.jpg" alt="art photo" class="popupS__img" />
+        <img src="./resources/favicons/android-chrome-192x192.png" alt="art photo" class="popupS__img" />
     </div>
 
     <h1 class="subHead">Winter Session 21</h1>
