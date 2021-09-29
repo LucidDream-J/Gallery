@@ -1,0 +1,131 @@
+
+
+.popup {
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    
+    transition: all .3s;
+}
+
+.popup__content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1500px;
+    height:auto;
+    max-height: 800px;
+    margin-top: 150px;
+    background-color: white;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, .2);
+    border-radius: 13px;
+    display: block;
+    overflow-x:hidden;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(2.5);
+    transition: all .5s .2s;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -webkit-border-radius: 13px;
+    -moz-border-radius: 13px;
+    -ms-border-radius: 13px;
+    -o-border-radius: 13px;
+}
+
+.popup__content.slideshow{
+    max-height: 95%;
+    top: 33%;
+}
+
+.popup__left {
+    width: 85%;
+    display: table-cell;
+    display: block;
+    padding: 20px;
+}
+/* table.content{
+    margin: auto;
+} */
+
+.popup__content h3{
+    padding-bottom: 5px;
+    text-align: center;
+}
+.popup__left div.space {
+    padding-bottom: 150px;
+}
+
+.popup__right {
+    width: 15%;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 3rem 5rem;
+}
+
+.popupS__img {
+    position: fixed;
+    bottom: 10;
+    right: 0;
+    width: 100px;
+    padding: 1rem ;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    opacity: 0.4;
+}
+
+
+.popup__text {
+    width: 70%;
+    font-size: 1.0 rem;
+    margin: 4rem;
+
+    column-count: 1;
+    /* column-gap: 4rem;
+    column-rule: 1px solid #999; */
+}
+
+/* Open states */
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* .popup:target, */
+.popup__content {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    -webkit-transform: translate(-50%, -50%) scale(1);
+    -moz-transform: translate(-50%, -50%) scale(1);
+    -ms-transform: translate(-50%, -50%) scale(1);
+    -o-transform: translate(-50%, -50%) scale(1);
+}
+
+
+.popup__close {
+    color: rgb(255,255,255);
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+    font-size: 3rem;
+    text-decoration: none;
+    display: inline-block;
+    transition: all .2s;
+    line-height: 1;
+    }
+
+    .popup__close:hover{
+        color: rgb(247, 75, 75);
+    }
