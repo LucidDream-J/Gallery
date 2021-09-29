@@ -20,6 +20,75 @@
     <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
     <link href="./css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/popup.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            max-width: 1500px;
+            height: 100vh;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .slide {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            text-align: center;
+            -webkit-transition: 0.6s ease;
+            transition: 0.6s ease;
+            -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+        }
+
+        .slide.active {
+            -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+        }
+
+        .slide.active~.slide {
+            -webkit-transform: translate(100%, 0);
+            transform: translate(100%, 0);
+        }
+
+
+        .slide {
+            background: #222;
+            color: white;
+            padding: 30px;
+        }
+
+        button {
+            margin-top: 5px;
+            border: none;
+            border-radius: 0;
+            background: aliceblue;
+            color: #333;
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .slide img {
+            width: 100%;
+            object-fit: fit;
+            margin: auto;
+        }
+    </style>
     <title>Gallery West - WA</title>
 </head>
 
@@ -33,7 +102,7 @@
         <a href="index.html"><img src="./images/Symbol.gif" alt="Logo" class="logomedium"></a>
     </div> -->
 
-    <div class="hero-5">
+    <div id="returnTop" class="hero-5">
         <h1>GWWA: Artists & Guest</h1>
         <a href="./index.html"><img src="./logo/teamLogo.png" alt="Logo" class="logomedium" /></a>
     </div>
@@ -58,15 +127,37 @@
     <h1>Disobedience Safeguards Freedom and Prevents Tyranny</h1>
     <section class="hero-8">
 
-        <div class="row">
+    </section>
+    <div class="popup" id="popup">
+        <div class="popup__content slideshow">
 
-        </div>
-        <div class="row">
-            <div class="col span-1-of-3">
+            <div class="slider__wrapper">
+                <div id="slider" class="slider">
+                    <div class="slide active">
+                        <h3>Obey - dis-Obey</h3>
+                        <img src="./disobey/Vic-59A.jpg" alt="">
+                    </div>
+                </div>
+                <button id="prev" class="btn">Prev</button>
+                <button id="next" class="btn">Next</button>
 
             </div>
+
+            <div class="popup__left">
+                <!-- <img src="../images/Symbol.gif" alt="art photo" class="popup__img" /> -->
+                <!-- <div class="space"></div> -->
+            </div>
+            <div class="popup__right">
+                <a href="#returnTop" class="popup__close">&times;</a>
+            </div>
         </div>
-    </section>
+        <img src="../images/Symbol.gif" alt="art photo" class="popupS__img" />
+    </div>
+
+
+    <a href="#popup" class="btn">View Online</a>
+
+
 
     <h1 class="subHead">Winter Session 21</h1>
     <div class="container-Ge">
@@ -105,7 +196,7 @@
                 </div>
             </div>
         </a>
-        <a href="#">
+        <a href="#popup">
             <div class="destination">
                 <div class="thumbnail">
                     <img src="./images/Vic-30A.jpg" alt="blockchain">
