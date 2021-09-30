@@ -151,19 +151,11 @@ const data = [
     text: "Obey - dis-Obey",
   },
   {
-    image: "./disobey/Vic-52A.jpg",
-    text: "Obey - dis-Obey",
-  },
-  {
     image: "./disobey/Vic-11A.jpg",
     text: "Obey - dis-Obey",
   },
   {
     image: "./disobey/Vic-12A.jpg",
-    text: "Obey - dis-Obey",
-  },
-  {
-    image: "./disobey/Vic-34A.jpg",
     text: "Obey - dis-Obey",
   },
   {
@@ -239,6 +231,10 @@ const data = [
     text: "Obey - dis-Obey",
   },
   {
+    image: "./disobey/Vic-58A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
     image: "./disobey/Vic-32BA.jpg",
     text: "Obey - dis-Obey",
   },
@@ -252,10 +248,6 @@ const data = [
   },
   {
     image: "./disobey/Vic-37A.jpg",
-    text: "Obey - dis-Obey",
-  },
-  {
-    image: "./disobey/Vic-3A.jpg",
     text: "Obey - dis-Obey",
   },
   {
@@ -279,10 +271,6 @@ const data = [
     text: "Obey - dis-Obey",
   },
   {
-    image: "./disobey/Vic-59A.jpg",
-    text: "Obey - dis-Obey",
-  },
-  {
     image: "./disobey/Vic-64A.jpg",
     text: "Obey - dis-Obey",
   },
@@ -291,10 +279,54 @@ const data = [
     text: "Obey - dis-Obey",
   },
   {
-    image: "./disobey/Vic-61A.jpg",
+    image: "./disobey/Vic-42A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-43A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-44A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-45A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-46A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-47A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-48A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-49A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-51A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-52A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-55A.jpg",
     text: "Obey - dis-Obey",
   },
 
+  {
+    image: "./disobey/Vic-61A.jpg",
+    text: "Obey - dis-Obey",
+  },
   {
     image: "./disobey/Vic-100A.jpg",
     text: "Obey - dis-Obey",
@@ -312,8 +344,9 @@ function createSlide(item) {
   slide.classList.add("slide");
 
   slide.innerHTML = `
+  
     <img src="${image}" alt="${text}" />
-    <h3>${text}</h3>
+    
   `;
 
   // box.addEventListener('click', () => {
