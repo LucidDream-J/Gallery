@@ -105,19 +105,12 @@
         <i class="fas fa-bars"></i>
     </button>
 
-    <!-- <div class="header">
-        <p class="text">Gallery East</p>
-        <a href="index.html"><img src="./images/Symbol.gif" alt="Logo" class="logomedium"></a>
-    </div> -->
 
     <div id="returnTop" class="hero-5">
         <h1>GWWA: Artists & Guest</h1>
         <a href="./index.html"><img src="./logo/teamLogo.png" alt="Logo" class="logomedium" /></a>
     </div>
-    <!-- <div class="header">
-        <p class="text">Gallery East</p>
-        <img src="./images/Symbol.gif" alt="Logo" class="logomedium">
-    </div>  -->
+
     <h1>OBEY &mdash; DisOBEY</h1>
     <h1>Disobedience Safeguards Freedom and Prevents Tyranny</h1>
     <section class="hero-6">
@@ -163,6 +156,18 @@
 
     <h1 class="subHead">Winter Session 21</h1>
     <div class="container-Ge">
+
+        <a href="#popup">
+            <div class="destination">
+                <div class="thumbnail">
+                    <img src="./images/Vic-30A.jpg" alt="blockchain">
+                </div>
+                <div class="content-Ge">
+                    <h1>Joseph de Traffa PIV</h1>
+                    <p>Meanwhile in Victoria AU</p>
+                </div>
+            </div>
+        </a>
         <a href="./TEAM/luciddream.html">
             <div class="destination">
                 <div class="thumbnail">
@@ -198,17 +203,47 @@
                 </div>
             </div>
         </a>
-        <a href="#popup">
-            <div class="destination">
+      
+        <div class="popupStatement" onclick="myFunction()">
+            <div class="destination ">
                 <div class="thumbnail">
-                    <img src="./images/Vic-30A.jpg" alt="blockchain">
+                    <img src="./images/question-mark.png" alt="blockchain">
                 </div>
                 <div class="content-Ge">
-                    <h1>Joseph de Traffa PIV</h1>
-                    <p>Meanwhile in Victoria AU</p>
+                    <h1>Just a thought</h1>
+                    <p>Art in early 21st century</p>
                 </div>
             </div>
-        </a>
+
+            <div class="popuptext" id="myPopup">
+
+                <p>Contempory art is increasingly academic.</p>
+                <p> This together with the rise of groups who see
+                    themselves as our guides, gurus and protectors of social cultural behaviours, has led to ideological
+                    dogmatism, top down prescriptivism and generally listless and predictable art forms.</p>
+                <p>Artists working in this framework, on inspection turn out generally to do nothing more than
+                    give exposure to acnied theory and narratives found in any first year cultural studies course. </p>
+                <p>Their works
+                    protraying theoretical cliche, textualised lives, textualized experiences and textualised
+                    expression, which though reassuring to
+                    some,
+                    are limiting and oppressive to most.</p>
+
+
+                <p>In these cases acnied theorized models are taken as being lived reality.</p>
+
+                <p>Fortunately life does not exist simply within language, theory and text but rather language although
+                    critical is one aspect in life.</p>
+                <p>LIVING is diverse, involving pre-linguistic and extra-linguistic expreinces and preceptions, offering
+                    far more than preconcieved theoretics, scripts and narratives. Unless one
+                    is an automoron, which some arrogantly take people to be.</p>
+
+                <p>Instead of the disembodied mentalistic somewhat bad-faith practices there are alternatives, one of
+                    which is an embodied, embedded and a critically aware dynamic situated practice. </p>
+
+                    <p>Artists try to show / communicate the un-sayable, the experienced un-defineable, the experienced un-"knowable" even in social life.</p> 
+            </div>
+        </div>
 
         <a href="#">
             <div class="destination">
@@ -346,6 +381,13 @@
             </div>
         </div>
     </div>
+    <script>
+        // When the user clicks on div, open the popup
+        function myFunction() {
+            var popupStatement = document.getElementById("myPopup");
+            popupStatement.classList.toggle("show");
+        }
+    </script>
     <script src="app.js"></script>
 </body>
 
