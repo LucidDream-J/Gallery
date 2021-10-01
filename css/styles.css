@@ -747,7 +747,7 @@ h3 {
 .destination {
     position: relative;
     box-sizing: border-box;
-    min-width: 275px;
+    min-width: 320px;
     max-width: 320px;
     height: 420px;
     margin: 20px;
@@ -918,7 +918,16 @@ h3 {
     letter-spacing: 0.1rem;
     text-indent: 2rem;
 }
-
+.statement{
+  display:none;
+    text-align: left;
+    max-width: 420px;
+    min-width: 320;
+}
+.statement:hover{
+    display: block;
+    z-index:32
+}
 /*/////////////////// form Send //////////////////////////  */
 #status {
     width: 90%;
