@@ -327,8 +327,13 @@ const data = [
     image: "./disobey/Vic-61A.jpg",
     text: "Obey - dis-Obey",
   },
+
   {
     image: "./disobey/Vic-100A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/bluefox.jpg",
     text: "Obey - dis-Obey",
   },
 ];
@@ -349,14 +354,6 @@ function createSlide(item) {
     
   `;
 
-  // box.addEventListener('click', () => {
-  //   setTextMessage(text);
-  //   speakText();
-
-  //   // Add active effect
-  //   box.classList.add('active');
-  //   setTimeout(() => box.classList.remove('active'), 800);
-  // });
   container.appendChild(slide);
 }
 
