@@ -357,7 +357,7 @@ const data = [
     text: "Obey - dis-Obey",
   },
   {
-    image: "./disobey/bluefox.jpg",
+    image: "./disobey/blueEox.jpg",
     text: "Obey - dis-Obey",
   },
 ];
