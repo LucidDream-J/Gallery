@@ -187,6 +187,26 @@ const data = [
     text: "Obey - dis-Obey",
   },
   {
+    image: "./disobey/Vic-54A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-71A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-72A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-73A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-70A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
     image: "./disobey/Vic-21A.jpg",
     text: "Obey - dis-Obey",
   },
@@ -320,6 +340,10 @@ const data = [
   },
   {
     image: "./disobey/Vic-55A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-68A.jpg",
     text: "Obey - dis-Obey",
   },
 
