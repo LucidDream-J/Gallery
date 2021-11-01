@@ -2,6 +2,7 @@ const open_btn = document.querySelector(".open-btn");
 const close_btn = document.querySelector(".close-btn");
 const nav = document.querySelectorAll(".nav");
 const floatingBTN = document.querySelector(".footerBtn");
+const btn = document.querySelectorAll(".btn");
 
 // attach an event listener
 floatingBTN.addEventListener("click", (e) => {
@@ -106,8 +107,6 @@ function ajax(method, url, data, success, error) {
 ///////////////////Form Send End/////////////////////////////////////////////
 
 //////////////////////////////////////slide show/////////////////////////////////////////
-
-const container = document.getElementById("slider");
 
 const data = [
   {
@@ -353,15 +352,19 @@ const data = [
   },
 
   {
+    image: "./disobey/Vic-101A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
     image: "./disobey/Vic-100A.jpg",
     text: "Obey - dis-Obey",
   },
   {
-    image: "./disobey/blueEox.jpg",
+    image: "./disobey/blueFox.jpg",
     text: "Obey - dis-Obey",
   },
 ];
-
+const slideContainer = document.getElementById("slider");
 data.forEach((item) => createSlide(item));
 
 // Create speech boxes
@@ -372,21 +375,16 @@ function createSlide(item) {
 
   slide.classList.add("slide");
 
-  slide.innerHTML = `
-  
-    <img src="${image}" alt="${text}" />
-    
-  `;
+  slide.innerHTML = ` <img src="${image}" alt="${text}" />`;
 
-  container.appendChild(slide);
+  slideContainer.appendChild(slide);
 }
 
 function slider() {
-  let slides = document.querySelectorAll(".slide"),
-    slider = document.querySelector(".slider"),
-    last = slider.lastElementChild,
-    first = slider.firstElementChild,
-    btn = document.querySelectorAll(".btn");
+  let slides = document.querySelectorAll(".slide");
+  slider = document.querySelector(".slider");
+  last = slider.lastElementChild;
+  first = slider.firstElementChild;
 
   slider.insertBefore(last, first);
 
@@ -463,3 +461,150 @@ slider();
 //     heart.remove();
 //   }, 1000);
 // }
+
+// const data = [
+//   {
+//     image: "./motherSons/mother2sons.jpg",
+//     text: "Mother, Sons, Spectators",
+//   },
+//   {
+//     image: "./motherSons/motherSon.jpg",
+//     text: "Mother, Sons, Spectators",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW1.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW10.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW11.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW12.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW13.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW15.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW14.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW17.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW18.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW19.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW2.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW20.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW21.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW22.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW23.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW24.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW25.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW26.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW27.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW28.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW29.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW3.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW30.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW31.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW32.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW33.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW4.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW5.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW6.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW7.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW8.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonBW9.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+//   {
+//     image: "./motherSons/motherSonSpectator.jpg",
+//     text: "Obey - dis-Obey",
+//   },
+// ];
