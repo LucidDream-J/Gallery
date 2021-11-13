@@ -293,10 +293,10 @@ header.traffa{
 }
 header.lucid{
   background-image: linear-gradient(
-    rgba(42, 39, 39, 0.4),
-    rgba(42, 39, 39, 0.6)
+    rgba(42, 39, 39, 0.2),
+    rgba(42, 39, 39, 0.2)
   ),
-  url("../images/lucid/indigenous/indi-back.jpg");
+  url("../images/lucid/blend-1.jpg");
 }
 
 .hero-text-box {
@@ -850,3 +850,43 @@ footer p {
     height: 100%;
     width: 100%;
     object-fit: cover; }
+
+  /*/////////////////// form Send feedback//////////////////////////  */
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 8px;
+}
+
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* /////////////////form Send End back/////////////////////////*/  
