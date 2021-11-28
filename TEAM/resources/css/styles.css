@@ -122,6 +122,10 @@ h2::after {
 .hero-3{
   background-image: url(../images/blockchainImages/confrontations.jpg);
 }
+.hero-3 p{
+  color:white;
+}
+
 .hero-4{
   background-image: url(../images/blockchainImages/unleashYouAwesome.jpg);
 }
