@@ -826,6 +826,8 @@ h3 {
 
 .card-container h3{
     color: #ff0000;
+    background-color:#ffffff;
+    padding: 10px
 }
 
 .panel {
