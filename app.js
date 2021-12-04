@@ -360,6 +360,18 @@ const data = [
     text: "Obey - dis-Obey",
   },
   {
+    image: "./disobey/Vic-102A.jpg",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-102A1.png",
+    text: "Obey - dis-Obey",
+  },
+  {
+    image: "./disobey/Vic-102A2.png",
+    text: "Obey - dis-Obey",
+  },
+  {
     image: "./disobey/blueFox.jpg",
     text: "Obey - dis-Obey",
   },
