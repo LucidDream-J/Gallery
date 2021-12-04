@@ -821,6 +821,11 @@ h3 {
     display: flex;
     width: 90vw;
     padding: 30px 0;
+    
+}
+
+.card-container h3{
+    color: #ff0000;
 }
 
 .panel {
