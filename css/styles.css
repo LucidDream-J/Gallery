@@ -126,6 +126,13 @@
     color: var(--light);
     font-size: 1.2rem;
 }
+.instruction_image {
+    min-height: 10vh;
+    width: 100vw;
+}
+.instruction_image img {
+    width: 100vw;
+}
 
 
 .hero h1 {
