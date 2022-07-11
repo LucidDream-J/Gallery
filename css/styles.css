@@ -17,7 +17,7 @@
 .hero {
     background-image: url(../images/harry-cunningham-f2WP97buEcA-unsplash.jpg);
     background-position: center center;
-    background-size: 95%/cover;
+    background-size: cover;
     min-height: 100vh;
     width: 100vw;
     background-attachment: fixed;
