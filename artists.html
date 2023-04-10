@@ -1,372 +1,448 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="resources/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="resources/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="resources/favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="resources/favicons/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="resources/favicons/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <link rel="shortcut icon" href="resources/favicons/favicon.ico" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta
+      name="msapplication-config"
+      content="resources/favicons/browserconfig.xml"
+    />
+    <meta name="theme-color" content="#ffffff" />
 
-<head>
-
-    <link rel="apple-touch-icon" sizes="180x180" href="resources/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="resources/favicons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="resources/favicons/favicon-16x16.png">
-    <link rel="manifest" href="resources/favicons/site.webmanifest">
-    <link rel="mask-icon" href="resources/favicons/safari-pinned-tab.svg" color="#5bbad5">
-    <link rel="shortcut icon" href="resources/favicons/favicon.ico">
-    <meta name="msapplication-TileColor" content="#da532c">
-    <meta name="msapplication-config" content="resources/favicons/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.0/normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato:400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css">
-    <link href="./css/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="./css/popup.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.0/normalize.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:400,700,900"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.1/css/all.css"
+    />
+    <link href="./css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./css/popup.css" />
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-        }
+      * {
+        margin: 0;
+        padding: 0;
+      }
 
-        * {
-            -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-        }
+      * {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+      }
 
-        body {
-            text-align: center;
-        }
+      body {
+        text-align: center;
+      }
 
-        .slider__wrapper {
-            height: 78vh;
-        }
+      .slider__wrapper {
+        height: 78vh;
+      }
 
-        .slider {
-            position: relative;
-            width: 100%;
-            max-width: 1500px;
-            height: 95vh;
-            margin: auto;
-            overflow: hidden;
-        }
+      .slider {
+        position: relative;
+        width: 100%;
+        max-width: 1500px;
+        height: 95vh;
+        margin: auto;
+        overflow: hidden;
+      }
 
-        .slide {
-            width: 100%;
-            height: 100vh;
-            position: absolute;
-            text-align: center;
-            -webkit-transition: 0.6s ease;
-            transition: 0.6s ease;
-            -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0);
-        }
+      .slide {
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        text-align: center;
+        -webkit-transition: 0.6s ease;
+        transition: 0.6s ease;
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0);
+      }
 
-        .slide.active {
-            -webkit-transform: translate(0, 0);
-            transform: translate(0, 0);
-        }
+      .slide.active {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+      }
 
-        .slide.active~.slide {
-            -webkit-transform: translate(100%, 0);
-            transform: translate(100%, 0);
-        }
+      .slide.active ~ .slide {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0);
+      }
 
+      .slide {
+        background: #222;
+        color: white;
+        padding: 30px;
+      }
 
-        .slide {
-            background: #222;
-            color: white;
-            padding: 30px;
-        }
+      .btn {
+        background-color: rgba(255, 204, 15, 0.7);
+        margin-top: 10px;
+        border: none;
+        border-radius: 4;
+        /* background: aliceblue; */
+        color: #333;
+        padding: 10px;
+        cursor: pointer;
+      }
 
-        .btn {
-            background-color: rgba(255, 204, 15, .7);
-            margin-top: 10px;
-            border: none;
-            border-radius: 4;
-            /* background: aliceblue; */
-            color: #333;
-            padding: 10px;
-            cursor: pointer;
-        }
+      .btn:hover {
+        background-color: rgba(255, 204, 15, 0.8);
+        margin-top: 10px;
+        border: none;
+        border-radius: 4;
+        /* background: aliceblue; */
+        color: rgba(255, 0, 0, 0.9);
+        padding: 10px;
+        cursor: pointer;
+      }
 
-        .btn:hover {
-            background-color: rgba(255, 204, 15, .8);
-            margin-top: 10px;
-            border: none;
-            border-radius: 4;
-            /* background: aliceblue; */
-            color: rgba(255, 0, 0, .9);
-            padding: 10px;
-            cursor: pointer;
-        }
+      .slide img {
+        width: 90%;
+        object-fit: fit;
+        margin: auto;
+      }
 
-        .slide img {
-            width: 90%;
-            object-fit: fit;
-            margin: auto;
-        }
+      #popup {
+        overflow-y: hidden;
+      }
 
-        #popup {
-            overflow-y: hidden;
-        }
-
-        #popup1 {
-            overflow-y: hidden;
-        }
+      #popup1 {
+        overflow-y: hidden;
+      }
     </style>
     <title>Gallery West - WA</title>
-</head>
+  </head>
 
-<body>
+  <body>
     <button class="nav-btn open-btn">
-        <i class="fas fa-bars"></i>
+      <i class="fas fa-bars"></i>
     </button>
 
-
     <div id="returnTop" class="hero-5">
-        <h1>GWWA: Artists & Guests</h1>
-        <a href="./index.html"><img src="./logo/teamLogo.png" alt="Logo" class="logomedium" /></a>
+      <h1>GWWA: Artists & Guests</h1>
+      <a href="./index.html"
+        ><img src="./logo/teamLogo.png" alt="Logo" class="logomedium"
+      /></a>
     </div>
 
     <h1>OBEY &mdash; DisOBEY</h1>
     <h1>Disobedience Safeguards Freedom and Prevents Tyranny</h1>
-    <h1 style="display: inline-block;">" Without irony or apology or the need for exegesis "</h1><br>
-    <br>
+    <h1 style="display: inline-block">
+      " Without irony or apology or the need for exegesis "
+    </h1>
+    <br />
+    <br />
     <section class="hero-6">
-
-        <div class="row">
-
-        </div>
-        <div class="row">
-            <div class="col span-1-of-3">
-
-            </div>
-        </div>
+      <div class="row"></div>
+      <div class="row">
+        <div class="col span-1-of-3"></div>
+      </div>
     </section>
     <h1>OBEY &mdash; DisOBEY</h1>
     <h1>Disobedience Safeguards Freedom and Prevents Tyranny</h1>
-    <section class="hero-8">
-
-    </section>
+    <section class="hero-8"></section>
     <div class="popup" id="popup">
-        <div class="popup__content slideshow">
-            <div class="slider__wrapper">
-                <div id="slider" class="slider">
-                    <div class="slide active">
-                        <img src="./disobey/Vic-59A.jpg" alt="">
-                        <h3>OBEY - dis-OBEY</h3>
-                    </div>
-                </div>
+      <div class="popup__content slideshow">
+        <div class="slider__wrapper">
+          <div id="slider" class="slider">
+            <div class="slide active">
+              <img src="./disobey/Vic-59A.jpg" alt="" />
+              <h3>OBEY - dis-OBEY</h3>
             </div>
-
-            <div class="popup__left">
-                <!-- <img src="../images/Symbol.gif" alt="art photo" class="popup__img" /> -->
-                <!-- <div class="space"></div> -->
-            </div>
-            <div class="popup__right">
-                <a href="#returnTop" class="popup__close">&times;</a>
-            </div>
-            <button id="prev" class="btn">Prev</button>
-            <button id="next" class="btn">Next</button>
+          </div>
         </div>
-        <img src="./resources/favicons/android-chrome-192x192.png" alt="art photo" class="popupS__img" />
+
+        <div class="popup__left">
+          <!-- <img src="../images/Symbol.gif" alt="art photo" class="popup__img" /> -->
+          <!-- <div class="space"></div> -->
+        </div>
+        <div class="popup__right">
+          <a href="#returnTop" class="popup__close">&times;</a>
+        </div>
+        <button id="prev" class="btn">Prev</button>
+        <button id="next" class="btn">Next</button>
+      </div>
+      <img
+        src="./resources/favicons/android-chrome-192x192.png"
+        alt="art photo"
+        class="popupS__img"
+      />
     </div>
 
-    <h1 class="subHead">" Without irony or apology or the need for exegesis "</h1>
+    <h1 class="subHead">
+      " Without irony or apology or the need for exegesis "
+    </h1>
     <div class="container-Ge">
+      <a href="#popup">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./TEAM/resources/images/detraffaPortraits/dicktator_dan_.jpg"
+              alt="blockchain"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P- 0</h1>
+            <p>Meanwhile in Melbourne AU</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="#popup">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./TEAM/resources/images/detraffaPortraits/dicktator_dan_.jpg" alt="blockchain">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P- 0</h1>
-                    <p>Meanwhile in Melbourne AU</p>
-                </div>
-            </div>
-        </a>
+      <a href="./nedKelly.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/Kelly-tale/tale-1-min.jpg" alt="Ned Kelly" />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-1</h1>
+            <p>Re-Contextualizing Ned Kelly</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="./nedKelly.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/Kelly-tale/tale-1-min.jpg" alt="Ned Kelly">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-1</h1>
-                    <p>Re-Contextualizing Ned Kelly</p>
-                </div>
-            </div>
-        </a>
+      <a href="./Assange.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/Assange/news--06-15-74.png" alt="de Traffa" />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-2</h1>
+            <p>Julian Assange Support</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="./Assange.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/Assange/news--06-15-74.png" alt="de Traffa">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-2</h1>
-                    <p>Julian Assange Support</p>
-                </div>
-            </div>
-        </a>
+      <a href="./nudes2023Main.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/Nudes2023/set-1/abstract-lifeDrawing-16.png"
+              alt="Special Guest"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-3A</h1>
+            <p>Human Condition 2023</p>
+          </div>
+        </div>
+      </a>
+      <a href="./nudesInLandscape.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/nudes/nudeInLandscape-5A-min.jpg"
+              alt="Special Guest"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-3B</h1>
+            <p>Nudes In Landscapes</p>
+          </div>
+        </div>
+      </a>
+      <a href="./heroInfluence.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/HomageHero/Robert Rauschenberg-12-min.png"
+              alt="Ned Kelly"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-4</h1>
+            <p>Homage to an Influence</p>
+          </div>
+        </div>
+      </a>
+      <a href="./WomenNoMen.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/womenNoMen/EdwardHooper-31-min.png"
+              alt="Ned Kelly"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-5</h1>
+            <p>Women without Men</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="./nudes2023Main.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/Nudes2023/set-1/abstract-lifeDrawing-16.png" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-3A</h1>
-                    <p>Human Condition 2023</p>
-                </div>
-            </div>
-        </a>
-        <a href="./nudesInLandscape.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/nudes/nudeInLandscape-5A-min.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-3B</h1>
-                    <p>Nudes In Landscapes</p>
-                </div>
-            </div>
-        </a>
-        <a href="./heroInfluence.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/HomageHero/Robert Rauschenberg-12-min.png" alt="Ned Kelly">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-4</h1>
-                    <p>Homage to an Influence</p>
-                </div>
-            </div>
-        </a>
-        <a href="./WomenNoMen.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/womenNoMen/EdwardHooper-31-min.png" alt="Ned Kelly">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-5</h1>
-                    <p>Women without Men</p>
-                </div>
-            </div>
-        </a>
-
-        <a href="./biomorphAbstraction.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/biomorphAbstractions/flatbiomorphicSeascape-12A-min.jpg"
-                        alt="Biomorph Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6A</h1>
-                    <p>Biomorph Abstractions</p>
-                </div>
-            </div>
-        </a>
-        <a href="./blurryEdgeAbstraction.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/blurryEdgeAbstraction/abstractionPurity.png" alt="Biomorph Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6B</h1>
-                    <p>Blurry Edge Abstractions</p>
-                </div>
-            </div>
-        </a>
-        <a href="./plantAbstractions.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/goodPlants/174.png" alt="Biomorph Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6C</h1>
-                    <p>Plant Abstractions</p>
-                </div>
-            </div>
-        </a>
-        <a href="./HandlewithCare.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/handlePosible/poetry-21.png" alt="Biomorph Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6D</h1>
-                    <p>Handle with Care Abstraction</p>
-                </div>
-            </div>
-        </a>
-        <a href="./uniquePresistent.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/UniquePresistent/nature-248.png" alt="Biomorph Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6E</h1>
-                    <p>"the land" Unique & Presistent</p>
-                </div>
-            </div>
-        </a>
-        <a href="./uniqueChange.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/uniqueChange/nature-448.png" alt="Biomorph Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6F</h1>
-                    <p>"the land" Unique & Changing</p>
-                </div>
-            </div>
-        </a>
-        <a href="./ImposedChange.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/antipodean/Antipodean-249.png" alt="Biomorph Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6G</h1>
-                    <p>"the land" Imposing Changes</p>
-                </div>
-            </div>
-        </a>
-        <a href="./SemiAbstract.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/antipodean/Antipodean.png" alt="Biomorph Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6H</h1>
-                    <p>"the land" Semi Abstracted</p>
-                </div>
-            </div>
-        </a>
-        <a href="./landAbstracted.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/LandscapeAbstraction/Antipodean-020.png" alt="Land Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6I</h1>
-                    <p>"the land" Abstracted</p>
-                </div>
-            </div>
-        </a>
-        <a href="./AbstractStruture.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/mlStructures/ML-AUS-Art-28.png" alt="Land Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6J</h1>
-                    <p>"the land" Abstract Structures In</p>
-                </div>
-            </div>
-        </a>
-        <!-- <a href="./AbstractStruture.html">
+      <a href="./biomorphAbstraction.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/biomorphAbstractions/flatbiomorphicSeascape-12A-min.jpg"
+              alt="Biomorph Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6A</h1>
+            <p>Biomorph Abstractions</p>
+          </div>
+        </div>
+      </a>
+      <a href="./blurryEdgeAbstraction.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/blurryEdgeAbstraction/abstractionPurity.png"
+              alt="Biomorph Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6B</h1>
+            <p>Blurry Edge Abstractions</p>
+          </div>
+        </div>
+      </a>
+      <a href="./plantAbstractions.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/goodPlants/174.png"
+              alt="Biomorph Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6C</h1>
+            <p>Plant Abstractions</p>
+          </div>
+        </div>
+      </a>
+      <a href="./HandlewithCare.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/handlePosible/poetry-21.png"
+              alt="Biomorph Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6D</h1>
+            <p>Handle with Care Abstraction</p>
+          </div>
+        </div>
+      </a>
+      <a href="./uniquePresistent.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/UniquePresistent/nature-248.png"
+              alt="Biomorph Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6E</h1>
+            <p>"the land" Unique & Presistent</p>
+          </div>
+        </div>
+      </a>
+      <a href="./uniqueChange.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/uniqueChange/nature-448.png"
+              alt="Biomorph Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6F</h1>
+            <p>"the land" Unique & Changing</p>
+          </div>
+        </div>
+      </a>
+      <a href="./ImposedChange.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/antipodean/Antipodean-249.png"
+              alt="Biomorph Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6G</h1>
+            <p>"the land" Imposing Changes</p>
+          </div>
+        </div>
+      </a>
+      <a href="./SemiAbstract.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/antipodean/Antipodean.png"
+              alt="Biomorph Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6H</h1>
+            <p>"the land" Semi Abstracted</p>
+          </div>
+        </div>
+      </a>
+      <a href="./landAbstracted.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/LandscapeAbstraction/Antipodean-020.png"
+              alt="Land Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6I</h1>
+            <p>"the land" Abstracted</p>
+          </div>
+        </div>
+      </a>
+      <a href="./AbstractStruture.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/mlStructures/ML-AUS-Art-28.png"
+              alt="Land Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6J</h1>
+            <p>"the land" Abstract Structures In</p>
+          </div>
+        </div>
+      </a>
+      <!-- <a href="./AbstractStruture.html">
             <div class="destination">
                 <div class="thumbnail">
                     <img src="./images/mlStructures/ML-AUS-Art-28.png"
@@ -378,29 +454,35 @@
                 </div>
             </div>
         </a> -->
-        <a href="./bushBirds.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/BushfiresCocatoos/Tucker-94.png" alt="Land Abstractions">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-6K</h1>
-                    <p>"the land" Bush Birds: The Great Retake</p>
-                </div>
-            </div>
-        </a>
-        <a href="./DistortedGrids.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/distortedGrids/distortedGrids-13A-min.jpg" alt="Epistemic Grids">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-7</h1>
-                    <p>Distorted Grids: States of Being</p>
-                </div>
-            </div>
-        </a>
-        <!-- <a href="./Epistemic.html">
+      <a href="./bushBirds.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/BushfiresCocatoos/Tucker-94.png"
+              alt="Land Abstractions"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-6K</h1>
+            <p>"the land" Bush Birds: The Great Retake</p>
+          </div>
+        </div>
+      </a>
+      <a href="./DistortedGrids.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/distortedGrids/distortedGrids-13A-min.jpg"
+              alt="Epistemic Grids"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-7</h1>
+            <p>Distorted Grids: States of Being</p>
+          </div>
+        </div>
+      </a>
+      <!-- <a href="./Epistemic.html">
             <div class="destination">
                 <div class="thumbnail">
                     <img src="./images/Epistemic/Human-0-min.png" alt="Epistemic Grids">
@@ -422,43 +504,43 @@
                 </div>
             </div>
         </a> -->
-        <a href="./TEAM/blockchain.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/blmRiots2.jpg" alt="blockchain">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-10</h1>
-                    <p>Project III Bockchain</p>
-                </div>
-            </div>
-        </a>
+      <a href="./TEAM/blockchain.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/blmRiots2.jpg" alt="blockchain" />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-10</h1>
+            <p>Project III Bockchain</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="./TEAM/josephTraffa.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/tim sketch 8.jpg" alt="Traffa">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-11</h1>
-                    <p>Project II de Traffa.</p>
-                </div>
-            </div>
-        </a>
+      <a href="./TEAM/josephTraffa.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/tim sketch 8.jpg" alt="Traffa" />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-11</h1>
+            <p>Project II de Traffa.</p>
+          </div>
+        </div>
+      </a>
 
-        <a href="./TEAM/luciddream.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/Art Queen.jpg" alt="Art Queen">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-12</h1>
-                    <p>Project I LucidDream</p>
-                </div>
-            </div>
-        </a>
+      <a href="./TEAM/luciddream.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/Art Queen.jpg" alt="Art Queen" />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-12</h1>
+            <p>Project I LucidDream</p>
+          </div>
+        </div>
+      </a>
 
-        <!-- <a href="./Judgements.html">
+      <!-- <a href="./Judgements.html">
             <div class="destination">
                 <div class="thumbnail">
                     <img src="./images/judgement/judgement-3-min.jpg" alt="Judgements">
@@ -480,162 +562,193 @@
                 </div>
             </div>
         </a> -->
-        <a href="#">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./motherSons/motherSon.jpg" alt="de Traffa">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-13</h1>
-                    <p>Mother, Sons, Spectators</p>
-                </div>
-                <div class="message">
-                    <h3>Under Construction</h3>
-                    <div class="icons">
-                        <i class="fas fa-pencil-ruler"></i>
-                        <i class="fas fa-tools"></i>
-                    </div>
-                    <p class="message-paragraph">
-                        Currently this category is unavailable
-                    </p>
-                </div>
+      <a href="#">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./motherSons/motherSon.jpg" alt="de Traffa" />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-13</h1>
+            <p>Mother, Sons, Spectators</p>
+          </div>
+          <div class="message">
+            <h3>Under Construction</h3>
+            <div class="icons">
+              <i class="fas fa-pencil-ruler"></i>
+              <i class="fas fa-tools"></i>
             </div>
-        </a>
-        <a href="./women.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/photos/women/eyesBlkSm.jpg" alt="de Traffa">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-14</h1>
-                    <p>Women</p>
-                </div>
-            </div>
-        </a>
-        <a href="./secondComming.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/imagesForAMessiah/christ image 32.png" alt="de Traffa">
-                </div>
-                <div class="content-Ge">
-                    <h1>Joseph de Traffa P-15</h1>
-                    <p>25 Images for the Return</p>
-                </div>
-            </div>
-        </a>
+            <p class="message-paragraph">
+              Currently this category is unavailable
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="./women.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/photos/women/eyesBlkSm.jpg" alt="de Traffa" />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-14</h1>
+            <p>Women</p>
+          </div>
+        </div>
+      </a>
+      <a href="./secondComming.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img
+              src="./images/imagesForAMessiah/christ image 32.png"
+              alt="de Traffa"
+            />
+          </div>
+          <div class="content-Ge">
+            <h1>Joseph de Traffa P-15</h1>
+            <p>25 Images for the Return</p>
+          </div>
+        </div>
+      </a>
 
+      <div class="popupStatement" onclick="myFunction2()">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/question-mark.png" alt="question mark" />
+          </div>
+          <div class="content-Ge">
+            <h1>Ai Arts</h1>
+            <p>Beyond reproduction in Art</p>
+          </div>
+        </div>
+        <div class="popuptext" id="myPopup2">
+          <p>
+            Well if AI can claim something to be art then maybe it can "make"
+            art ... eg Duchamp's urinal!
+          </p>
+          <p>
+            Duchamp was, Picasso aside, "the major influence" on art in the 20th
+            century and even now ... he opened 'the can' even more.
+          </p>
+          <p>
+            After these two, anything could be art, chance events, the act of
+            doing or making nothing could be perceived a work of art...Cage 4
+            minutes of silence ... de Traffa's empty canvases
+          </p>
+          <p>In this context maybe an AI system can be seen to make art</p>
 
+          <h4>artist as machine</h4>
+          3
+          <p>
+            the AI does not need to make any claims, be conscious, have general
+            intelligence, be creative, have intention or emotion ... even if it
+            could... and what's more AI is already always socially embedded...
+            Warhol's "I am a machine"
+          </p>
 
-        <div class="popupStatement" onclick="myFunction2()">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/question-mark.png" alt="question mark">
-                </div>
-                <div class="content-Ge">
-                    <h1>New AI Masters?</h1>
-                    <p>
-                        Learning from the masters
-                    </p>
-                </div>
-            </div>
-            <div class="popuptext" id="myPopup2">
+          <p>
+            in this context many already see some AI systems as "generating -
+            making" "art" and exploit the possibilities? Maybe for anything or
+            non-thing to be "art" is always a collaboration?
+          </p>
 
-                <p>Well if AI can claim something to be art then maybe it can "make" art ... eg Duchamp's urinal!</p>
-                <p> Duchamp was, Picasso aside, "the major influence" on art in the 20th century and even now ... he
-                    opened
-                    'the can' even more.</p>
-                <p>After these two, anything could be art, chance events, the act of doing or making nothing could be
-                    perceived a work of art...Cage 4 minutes of silence ... de Traffa's empty canvases </p>
-                <p>In this context maybe an AI system can be seen to make art</p>
+          <p>
+            Additionaly is it Ai creates art or mohbe we can create Ai/s that
+            are, accidently, or contextually designed to "make art in new ways",
+            no matter whichever particular art or cultural theoretical
+            perspectives are assumed / taken on "what is Art" or "what could be
+            Art"?
+          </p>
+          <p>
+            Throughout history art has changed in terms of within any particular
+            medium and in terms of any new media! At this point Ai, as it
+            stands, appears another new media ...
+          </p>
 
-                <h4>artist as machine</h4>
-                3
-                <p>the AI does not need to make any claims, be conscious, have general intelligence, be creative,
-                    have intention or emotion
-                    ...
-                    even if it could... and what's more AI is already always socially embedded... Warhol's "I am a
-                    machine"
-                </p>
+          <p>
+            At this point Ai, as it stands, appears just another new media ... a
+            new media which has moved us way beyond Benjamin's "art in the age
+            of mechanical reproduction" "warhol's artist machine "....
+          </p>
+        </div>
+      </div>
 
-                <p> in this context many already see some AI systems as "generating - making" "art" and exploit the
-                    possibilities? Maybe for anything or non-thing to be "art" is always a collaboration?</p>
+      <div class="destination">
+        <div class="thumbnail">
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/WY518YRfs5M"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div class="content-Ge">
+          <h1>New AI Masters?</h1>
+          <p>Learning from the masters</p>
+        </div>
+      </div>
 
-                <p>Additionaly is it Ai creates art or mohbe we can create Ai/s that are, accidently, or contextually
-                    designed to "make art in new ways", no matter whichever particular art or cultural theoretical
-                    perspectives are assumed / taken on "what is Art" or "what could be Art"?</p>
-                <p> Throughout history art has changed in terms of within any particular medium and in terms of any new
-                    media! At this point Ai, as it stands, appears another new media ...</p>
-
-                <p>At this point Ai, as it stands, appears just another new media ...
-                    a new media which has moved us way beyond Benjamin's "art in the age of mechanical reproduction"
-                    "warhol's artist machine "....</p>
-            </div>
+      <div class="popupStatement" onclick="myFunction()">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/question-mark.png" alt="question mark" />
+          </div>
+          <div class="content-Ge">
+            <h1>Just a thought</h1>
+            <p>Art in early 21st century</p>
+          </div>
         </div>
 
-    
-            <div class="destination">
-                <div class="thumbnail">
-                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/WY518YRfs5M"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="content-Ge">
-                    <h1>New AI Masters?</h1>
-                    <p>
-                        Learning from the masters
-                    </p>
-                </div>
-            </div>
+        <div class="popuptext" id="myPopup">
+          <p>Contempory art is increasingly academic.</p>
+          <p>
+            This together with the rise of groups who see themselves as our
+            guides, gurus and protectors of social cultural behaviours, has led
+            to ideological dogmatism, top down prescriptivism and generally
+            listless and predictable art forms.
+          </p>
+          <p>
+            Artists working in this framework, on inspection turn out generally
+            to do nothing more than give exposure to acnied theory and
+            narratives found in any first year cultural studies course.
+          </p>
+          <p>
+            Their works protraying theoretical cliche, textualised lives,
+            textualized experiences and textualised expression, which though
+            reassuring to some, are limiting and oppressive to most.
+          </p>
 
+          <p>
+            In these cases acnied theorized models are taken as being lived
+            reality.
+          </p>
 
+          <p>
+            Fortunately life does not exist simply within language, theory and
+            text but rather language although critical is one aspect in life.
+          </p>
+          <p>
+            LIVING is diverse, involving pre-linguistic and extra-linguistic
+            expreinces and preceptions, offering far more than preconcieved
+            theoretics, scripts and narratives. Unless one is an automoron,
+            which some arrogantly take people to be.
+          </p>
 
+          <p>
+            Instead of the disembodied mentalistic somewhat bad-faith practices
+            there are alternatives, one of which is an embodied, embedded and a
+            critically aware dynamic situated practice.
+          </p>
 
-
-        <div class="popupStatement" onclick="myFunction()">
-            <div class="destination ">
-                <div class="thumbnail">
-                    <img src="./images/question-mark.png" alt="question mark">
-                </div>
-                <div class="content-Ge">
-                    <h1>Just a thought</h1>
-                    <p>Art in early 21st century</p>
-                </div>
-            </div>
-
-            <div class="popuptext" id="myPopup">
-
-                <p>Contempory art is increasingly academic.</p>
-                <p> This together with the rise of groups who see
-                    themselves as our guides, gurus and protectors of social cultural behaviours, has led to ideological
-                    dogmatism, top down prescriptivism and generally listless and predictable art forms.</p>
-                <p>Artists working in this framework, on inspection turn out generally to do nothing more than
-                    give exposure to acnied theory and narratives found in any first year cultural studies course. </p>
-                <p>Their works
-                    protraying theoretical cliche, textualised lives, textualized experiences and textualised
-                    expression, which though reassuring to
-                    some,
-                    are limiting and oppressive to most.</p>
-
-
-                <p>In these cases acnied theorized models are taken as being lived reality.</p>
-
-                <p>Fortunately life does not exist simply within language, theory and text but rather language although
-                    critical is one aspect in life.</p>
-                <p>LIVING is diverse, involving pre-linguistic and extra-linguistic expreinces and preceptions, offering
-                    far more than preconcieved theoretics, scripts and narratives. Unless one
-                    is an automoron, which some arrogantly take people to be.</p>
-
-                <p>Instead of the disembodied mentalistic somewhat bad-faith practices there are alternatives, one of
-                    which is an embodied, embedded and a critically aware dynamic situated practice. </p>
-
-                <p>Artists try to show / communicate the un-sayable, the experienced un-defineable, the experienced
-                    un-"knowable" even in social life.</p>
-            </div>
+          <p>
+            Artists try to show / communicate the un-sayable, the experienced
+            un-defineable, the experienced un-"knowable" even in social life.
+          </p>
         </div>
+      </div>
 
-
-        <!-- <a href="./smallProjects.html">
+      <!-- <a href="./smallProjects.html">
             <div class="destination">
                 <div class="thumbnail">
                     <img src="./images/pinkMask.jpg" alt="Special Guest">
@@ -647,392 +760,394 @@
             </div>
         </a> -->
 
-        <a href="./guest.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/pinkMask.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 1</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus, similique?</p>
-                </div>
-            </div>
-        </a>
-        <a href="./Years-After-Van.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 2</h1>
-                    <p>Years after Van Gogh
-                    </p>
-                </div>
-            </div>
-        </a>
-        <a href="./queen-of-AU.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask3.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 3</h1>
-                    <p>Queen of AU</p>
-                </div>
-            </div>
-        </a>
-        <a href="./moments-of-silence.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask5.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 4</h1>
-                    <p>moments of perception</p>
-                </div>
-            </div>
-        </a>
-        <a href="./alterity.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask11.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 5</h1>
-                    <p>Vehicle for alterity</p>
-                </div>
-            </div>
-        </a>
-        <a href="./deferral.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask6.png" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 6</h1>
-                    <p>indefinite deferral</p>
-                </div>
-            </div>
-        </a>
-        <a href="./meanwhile.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask10.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 7</h1>
-                    <p>meanwhile melbourne</p>
-                </div>
-            </div>
-        </a>
-        <a href="./journeyOut.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask12.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 8</h1>
-                    <p>interior to exterior</p>
-                </div>
-            </div>
-        </a>
-        <a href="./journeyOut_2.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask13.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 9</h1>
-                    <p>toxic - landscapes</p>
-                </div>
-            </div>
-        </a>
-        <a href="./moments-of-silence-2.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask16.png" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 10</h1>
-                    <p>build up - burn down</p>
-                </div>
-            </div>
-        </a>
-        <a href="./veiwingViewed.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 11</h1>
-                    <p>viewing - viewed</p>
-                </div>
-            </div>
-        </a>
-        <a href="./infinitePossible.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 12</h1>
-                    <p>Infinite - Possible</p>
-                </div>
-            </div>
-        </a>
-        <a href="./infinitePossible-2.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 13</h1>
-                    <p>Infinite - Possible - 2</p>
-                </div>
-            </div>
-        </a>
-        <a href="./infinitePossible-3.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 14</h1>
-                    <p>Infinite - Possible - 3</p>
-                </div>
-            </div>
-        </a>
-        <a href="./infinitePossible-4.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 15</h1>
-                    <p>Infinite - Possible - 4</p>
-                </div>
-            </div>
-        </a>
-        <a href="./instructionSet-1.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 16</h1>
-                    <p>InStruction - set - 1</p>
-                </div>
-            </div>
-        </a>
-        <a href="./iconSet-1.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 17</h1>
-                    <p>Icon - set - 1</p>
-                </div>
-            </div>
-        </a>
-        <a href="./iconSet-2.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 18</h1>
-                    <p>Icon - set - currency</p>
-                </div>
-            </div>
-        </a>
-        <a href="./iconSet-3.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 19</h1>
-                    <p>Icon - set - Abortion</p>
-                </div>
-            </div>
-        </a>
-        <a href="./iconSet-4.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 20</h1>
-                    <p>Icon - set - War</p>
-                </div>
-            </div>
-        </a>
-        <a href="./ExotixVirus-2.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 21</h1>
-                    <p>Exotic - Virus</p>
-                </div>
-            </div>
-        </a>
-        <a href="./infinite-possible-scroll.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 22</h1>
-                    <p>Infinite - possible - series</p>
-                </div>
-            </div>
-        </a>
-        <a href="./howTheySawIt.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 23</h1>
-                    <p>Grand-Visions - 1</p>
-                </div>
-            </div>
-        </a>
-        <a href="./howTheySawIt-2.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 24</h1>
-                    <p>Grand-Visions - 2</p>
-                </div>
-            </div>
-        </a>
-        <a href="./howTheySawIt-4.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 26</h1>
-                    <p>Grand-Visions - 4: Modern-Domestic-Visions - 1</p>
-                </div>
-            </div>
-        </a>
-        <a href="./aliens-1.html">
-            <div class="destination">
-                <div class="thumbnail">
-                    <img src="./images/guestMask14.jpg" alt="Special Guest">
-                </div>
-                <div class="content-Ge">
-                    <h1>René Squadling - 27</h1>
-                    <p>Encounters with Aliens</p>
-                </div>
-            </div>
-        </a>
-
-
+      <a href="./guest.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/pinkMask.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 1</h1>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus,
+              similique?
+            </p>
+          </div>
+        </div>
+      </a>
+      <a href="./Years-After-Van.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 2</h1>
+            <p>Years after Van Gogh</p>
+          </div>
+        </div>
+      </a>
+      <a href="./queen-of-AU.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask3.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 3</h1>
+            <p>Queen of AU</p>
+          </div>
+        </div>
+      </a>
+      <a href="./moments-of-silence.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask5.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 4</h1>
+            <p>moments of perception</p>
+          </div>
+        </div>
+      </a>
+      <a href="./alterity.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask11.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 5</h1>
+            <p>Vehicle for alterity</p>
+          </div>
+        </div>
+      </a>
+      <a href="./deferral.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask6.png" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 6</h1>
+            <p>indefinite deferral</p>
+          </div>
+        </div>
+      </a>
+      <a href="./meanwhile.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask10.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 7</h1>
+            <p>meanwhile melbourne</p>
+          </div>
+        </div>
+      </a>
+      <a href="./journeyOut.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask12.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 8</h1>
+            <p>interior to exterior</p>
+          </div>
+        </div>
+      </a>
+      <a href="./journeyOut_2.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask13.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 9</h1>
+            <p>toxic - landscapes</p>
+          </div>
+        </div>
+      </a>
+      <a href="./moments-of-silence-2.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask16.png" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 10</h1>
+            <p>build up - burn down</p>
+          </div>
+        </div>
+      </a>
+      <a href="./veiwingViewed.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 11</h1>
+            <p>viewing - viewed</p>
+          </div>
+        </div>
+      </a>
+      <a href="./infinitePossible.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 12</h1>
+            <p>Infinite - Possible</p>
+          </div>
+        </div>
+      </a>
+      <a href="./infinitePossible-2.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 13</h1>
+            <p>Infinite - Possible - 2</p>
+          </div>
+        </div>
+      </a>
+      <a href="./infinitePossible-3.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 14</h1>
+            <p>Infinite - Possible - 3</p>
+          </div>
+        </div>
+      </a>
+      <a href="./infinitePossible-4.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 15</h1>
+            <p>Infinite - Possible - 4</p>
+          </div>
+        </div>
+      </a>
+      <a href="./instructionSet-1.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 16</h1>
+            <p>InStruction - set - 1</p>
+          </div>
+        </div>
+      </a>
+      <a href="./iconSet-1.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 17</h1>
+            <p>Icon - set - 1</p>
+          </div>
+        </div>
+      </a>
+      <a href="./iconSet-2.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 18</h1>
+            <p>Icon - set - currency</p>
+          </div>
+        </div>
+      </a>
+      <a href="./iconSet-3.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 19</h1>
+            <p>Icon - set - Abortion</p>
+          </div>
+        </div>
+      </a>
+      <a href="./iconSet-4.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 20</h1>
+            <p>Icon - set - War</p>
+          </div>
+        </div>
+      </a>
+      <a href="./ExotixVirus-2.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 21</h1>
+            <p>Exotic - Virus</p>
+          </div>
+        </div>
+      </a>
+      <a href="./infinite-possible-scroll.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 22</h1>
+            <p>Infinite - possible - series</p>
+          </div>
+        </div>
+      </a>
+      <a href="./howTheySawIt.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 23</h1>
+            <p>Grand-Visions - 1</p>
+          </div>
+        </div>
+      </a>
+      <a href="./howTheySawIt-2.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 24</h1>
+            <p>Grand-Visions - 2</p>
+          </div>
+        </div>
+      </a>
+      <a href="./howTheySawIt-4.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 26</h1>
+            <p>Grand-Visions - 4: Modern-Domestic-Visions - 1</p>
+          </div>
+        </div>
+      </a>
+      <a href="./aliens-1.html">
+        <div class="destination">
+          <div class="thumbnail">
+            <img src="./images/guestMask14.jpg" alt="Special Guest" />
+          </div>
+          <div class="content-Ge">
+            <h1>René Squadling - 27</h1>
+            <p>Encounters with Aliens</p>
+          </div>
+        </div>
+      </a>
     </div>
 
     <div class="hero-2">
-        <h2> . ... " Without irony or apology or the need for exegesis "</h2>
+      <h2>. ... " Without irony or apology or the need for exegesis "</h2>
     </div>
 
     <footer id="footer" class="footer glass">
-        <div class="container">
-            <div class="nav-footer">
-                <h3>Art Evaluations</h3>
-                <nav class="menu">
-                    <a href="#">History of Ownership </a>
-                    <a href="#">Provennonce</a>
-                    <a href="#">Policies</a>
-                    <a href="#">Help</a>
-                </nav>
-            </div>
-            <div class="nav-footer">
-                <h3>Art Buying</h3>
-                <nav class="menu">
-                    <a href="#">Trust & Safety</a>
-                    <a href="#">Buying Credit</a>
-                    <a href="#">Art Cards</a>
-                    <a href="#">Art Prints</a>
-                    <a href="#">Buying Events <span class="new">New</span> </a>
-                </nav>
-            </div>
-            <div class="nav-footer">
-                <h3>Art Hiring</h3>
-                <nav class="menu">
-                    <a href="#">Why Hire</a>
-                    <a href="#">Hospitality</a>
-                    <a href="#">Responsible Hiring</a>
-                    <a href="#">Your Events</a>
-                </nav>
-            </div>
-            <div class="nav-footer">
-                <nav class="social-nav">
-                    <a href="http://facebook.com"><span>Facebook</span></a>
-                    <a href="http://twitter.com"><span>Twitter</span></a>
-                    <a href="http://instagram.com"><span>Instagram</span></a>
-                </nav>
-                <nav class="menu">
-                    <a href="#">Terms</a>
-                    <a href="#">Privacy</a>
-                    <a href="#">Site map</a>
-                </nav>
-                <p class="menu">
-                    Copyright &copy; 2021 by EATS Design, <br>All rights reserved</br> .
-                </p>
-            </div>
+      <div class="container">
+        <div class="nav-footer">
+          <h3>Art Evaluations</h3>
+          <nav class="menu">
+            <a href="#">History of Ownership </a>
+            <a href="#">Provennonce</a>
+            <a href="#">Policies</a>
+            <a href="#">Help</a>
+          </nav>
         </div>
+        <div class="nav-footer">
+          <h3>Art Buying</h3>
+          <nav class="menu">
+            <a href="#">Trust & Safety</a>
+            <a href="#">Buying Credit</a>
+            <a href="#">Art Cards</a>
+            <a href="#">Art Prints</a>
+            <a href="#">Buying Events <span class="new">New</span> </a>
+          </nav>
+        </div>
+        <div class="nav-footer">
+          <h3>Art Hiring</h3>
+          <nav class="menu">
+            <a href="#">Why Hire</a>
+            <a href="#">Hospitality</a>
+            <a href="#">Responsible Hiring</a>
+            <a href="#">Your Events</a>
+          </nav>
+        </div>
+        <div class="nav-footer">
+          <nav class="social-nav">
+            <a href="http://facebook.com"><span>Facebook</span></a>
+            <a href="http://twitter.com"><span>Twitter</span></a>
+            <a href="http://instagram.com"><span>Instagram</span></a>
+          </nav>
+          <nav class="menu">
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+            <a href="#">Site map</a>
+          </nav>
+          <p class="menu">
+            Copyright &copy; 2021 by EATS Design, <br />All rights reserved.
+          </p>
+        </div>
+      </div>
     </footer>
     <a href="#footer" class="footerBtn">Services, Terms, Privacy & more</a>
 
-
     <div class="nav nav-black">
-        <div class="nav nav-red">
-            <div class="nav nav-white">
-                <button class="nav-btn close-btn">
-                    <i class="fas fa-times"></i>
-                </button>
+      <div class="nav nav-red">
+        <div class="nav nav-white">
+          <button class="nav-btn close-btn">
+            <i class="fas fa-times"></i>
+          </button>
 
-                <a href="index.html"><img src="./logo/teamLogo.png" alt="Logo" class="logo"></a>
+          <a href="index.html"
+            ><img src="./logo/teamLogo.png" alt="Logo" class="logo"
+          /></a>
 
-                <ul class="list">
-                    <li><a href="#">about us</a></li>
-                    <li><a href="#">Artists</a></li>
-                    <li><a href="#">featured artists</a></li>
-                    <li><a href="#">art prints</a></li>
-                    <li><a class="active" href="./computerArts.html">computer arts</a></li>
-                    <li>
-                        <ul>
-                            <li><a href="#">Gallery Culture</a></li>
-                            <li><a href="#">Directors</a></li>
-                            <li><a href="#">services</a></li>
-                            <li><a class="active" href="./guest.html">Guest Artist</a></li>
-                            <li><a href="#">relevant links</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
+          <ul class="list">
+            <li><a href="#">about us</a></li>
+            <li><a href="#">Artists</a></li>
+            <li><a href="#">featured artists</a></li>
+            <li><a href="#">art prints</a></li>
+            <li>
+              <a class="active" href="./computerArts.html">computer arts</a>
+            </li>
+            <li>
+              <ul>
+                <li><a href="#">Gallery Culture</a></li>
+                <li><a href="#">Directors</a></li>
+                <li><a href="#">services</a></li>
+                <li><a class="active" href="./guest.html">Guest Artist</a></li>
+                <li><a href="#">relevant links</a></li>
+              </ul>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
     <script>
-        // When the user clicks on div, open the popup
-        function myFunction() {
-            var popupStatement = document.getElementById("myPopup");
-            popupStatement.classList.toggle("show");
-        }
+      // When the user clicks on div, open the popup
+      function myFunction() {
+        var popupStatement = document.getElementById('myPopup')
+        popupStatement.classList.toggle('show')
+      }
 
-        function myFunction2() {
-            var popupStatement2 = document.getElementById("myPopup2");
-            popupStatement2.classList.toggle("show");
-        }
+      function myFunction2() {
+        var popupStatement2 = document.getElementById('myPopup2')
+        popupStatement2.classList.toggle('show')
+      }
     </script>
     <script src="app.js"></script>
-</body>
-
+  </body>
 </html>
