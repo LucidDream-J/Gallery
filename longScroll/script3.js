@@ -7,79 +7,79 @@ const data3 = [
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-91-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-91-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-92-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-92-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-93-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-93-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-94-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-94-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-95-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-95-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-96-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-96-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-97-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-97-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-98-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-98-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-99-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-99-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-72-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-72-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-73-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-73-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-77-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-77-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-82-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-82-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-16-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-16-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-28-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-28-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-29-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-29-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-75-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-75-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-70B-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-70B-min.jpg',
       text: 'They took out we put back in!',
     },
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-71-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-71-min.jpg',
       text: 'They took out we put back in!',
     },
   ]
