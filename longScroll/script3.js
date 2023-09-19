@@ -3,7 +3,7 @@ const textarea = document.getElementById('text')
 
 const data3 = [
     {
-      image: '../images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-100-min.jpg',
+      image: './images/RePopulate/longScrolIndigi/Australian_indigenous_people_in_landscape-100-min.jpg',
       text: 'They took out we put back in!',
     },
     {
